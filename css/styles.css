@@ -1,0 +1,24 @@
+img {
+    width: 100%;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    height: 3rem;
+    width: 3rem;
+}
+
+.col-sm-6 {
+    box-sizing: border-box;
+}
+
+.meh {
+    background: red;
+}
+
+.heh {
+    background: blue;
+}
+
+.row {
+    background: green;
+}
