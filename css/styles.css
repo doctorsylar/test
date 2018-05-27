@@ -22,3 +22,21 @@ img {
 .row {
     background: green;
 }
+
+
+/*CAN BE DELETED*/
+.menu-item {
+    border: 2px solid green;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-item .submenu {
+    height: 40px;
+    width: 120px;
+    background: aqua;
+    position: absolute;
+    cursor: pointer;
+}
+/*CAN BE DELETED*/

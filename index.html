@@ -93,12 +93,50 @@
             <div class="container-fluid p-0">
                 <div class="row m-0">
                     <div class="col-sm-6 p-0 meh ">
-                        ABC
+                        <div>
+                            <select name="fruit" id="mySelect"
+                                    class="custom-select" onchange="selFunc()">
+                                <option name="fruit">Orange</option>
+                                <option name="fruit">Watermelon</option>
+                                <option name="fruit">Apple</option>
+                                <option name="fruit">Apricot</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input id="inp-range" type="range"
+                                   min="0" max="500" oninput="check()">
+                            <br/>
+                            <p id="range-result">
+                                0
+                            </p>
+                        </div>
                     </div>
                     <div class="col-sm-6 p-0 heh" >
-                        DEF
-                        <br />
-                        Retarded
+                        <!--/*CAN BE DELETED*/-->
+                        <div class="nav" id="nav">
+                            <div class="menu-item">
+                                Menu 1
+                                <div class="submenu">
+                                    Submenu 1
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                Menu 2
+                                <div class="submenu">
+                                    Submenu 2
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                Menu 3
+                                <div class="submenu">
+                                    Submenu 3
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            just another cool div
+                        </div>
+                        <!--/*CAN BE DELETED*/-->
                     </div>
                 </div>
             </div>
