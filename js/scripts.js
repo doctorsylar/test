@@ -2,6 +2,19 @@ $('#carousel').carousel({
     interval: 2000
 });
 
+// VueJS section
+var app = new Vue({
+    el: '#app',
+    data: {
+        message: ""
+    }
+});
+
+// function app_change() {
+//     let text = document.getElementById('app-input').value;
+//     app.message = text;
+// }
+
 
 // jQuery section
 $(function () {
