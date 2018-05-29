@@ -23,6 +23,17 @@ img {
     background: green;
 }
 
+#blank1 {
+    color: gray;
+}
+
+#red {
+    color: red;
+}
+
+#blue {
+    color: blue;
+}
 
 /*CAN BE DELETED*/
 .menu-item {

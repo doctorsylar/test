@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -102,12 +102,12 @@
                                 <option name="fruit">Apricot</option>
                             </select>
                         </div>
-                        <div>
-                            <input id="inp-range" type="range"
-                                   min="0" max="500" oninput="check()">
+                        <div id="rangeApp">
+                            <input id="rangeAppInput" type="range"
+                                   min="0" max="500" v-model="range" v->
                             <br/>
                             <p id="range-result">
-                                0
+                                {{range}}
                             </p>
                         </div>
 
@@ -115,6 +115,32 @@
                             <input type="text" v-model="message">
                             <br />
                             <h1> {{message}}</h1>
+                        </div>
+
+                        <div id="app-4">
+                            <ol>
+                                <li v-for="todo in todos">
+                                    {{ todo.text }}
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div id="testId">
+                            <div>
+                                <div>
+                                    ID:
+                                    <input v-model="id_1" type="text" >
+                                </div>
+                                <div>
+                                    Class:
+                                    <input v-model="class_1" type="text" >
+                                </div>
+                            </div>
+                            <div>
+                                <p v-bind:id="id_1" v-bind:class="class_1">
+                                    Just text for test
+                                </p>
+                            </div>
                         </div>
 
                     </div>

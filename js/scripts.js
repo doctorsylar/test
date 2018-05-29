@@ -10,6 +10,32 @@ var app = new Vue({
     }
 });
 
+var rangeApp = new Vue({
+    el: '#rangeApp',
+    data: {
+        range: "250"
+    }
+});
+
+var testId = new Vue({
+    el: '#testId',
+    data : {
+        id_1 : "",
+        class_1 : ""
+    }
+});
+
+var app4 = new Vue({
+    el: '#app-4',
+    data: {
+        todos: [
+            { text: 'Learn JavaScript' },
+            { text: 'Learn Vue' },
+            { text: 'Build something awesome' }
+        ]
+    }
+});
+
 // function app_change() {
 //     let text = document.getElementById('app-input').value;
 //     app.message = text;
