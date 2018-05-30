@@ -20,8 +20,20 @@ var rangeApp = new Vue({
 var testId = new Vue({
     el: '#testId',
     data : {
-        id_1 : "",
-        class_1 : ""
+        firstName : "",
+        lastName : ""
+    },
+    computed : {
+        fullName : {
+            get : function () {
+                return this.firstName + ' ' + this.lastName;
+            },
+            set : function (fullName) {
+                let names = fullName.split(' ');
+                this.firstName = names[0];
+                this.lastName = names[names.length-1];
+            }
+        }
     }
 });
 
