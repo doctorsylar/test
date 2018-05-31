@@ -48,6 +48,19 @@ var app4 = new Vue({
     }
 });
 
+var toDoList = new Vue({
+    el: '#toDoList',
+    data: {
+        list : ["one", "two"]
+    }
+});
+
+
+
+function addTask() {
+    toDoList.list.push(document.getElementById('inputToDo').value);
+    document.getElementById('inputToDo').value = "";
+}
 // function app_change() {
 //     let text = document.getElementById('app-input').value;
 //     app.message = text;
@@ -93,7 +106,6 @@ document.getElementById('nav').onmouseover = function (event) {
 
 document.onmouseover = function (event) {
     var target = event.target;
-    console.log(event.target);
     if (target.className != 'menu-item' && target.className != 'submenu') {
         closeMenu();
     }
