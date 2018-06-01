@@ -26,12 +26,19 @@ var testId = new Vue({
     computed : {
         fullName : {
             get : function () {
-                return this.firstName + ' ' + this.lastName;
+                if (this.firstName !== '' && this.lastName !== '') {
+                    return this.firstName + ' ' + this.lastName;
+                }
+                else {
+                    return this.firstName + this.lastName;
+                }
             },
             set : function (fullName) {
-                let names = fullName.split(' ');
+                var names = fullName.split(' ');
                 this.firstName = names[0];
-                this.lastName = names[names.length-1];
+                if (names.length > 1) {
+                    this.lastName = names[names.length-1];
+                }
             }
         }
     }
@@ -52,20 +59,28 @@ var toDoList = new Vue({
     el: '#toDoList',
     data: {
         list : ["one", "two"]
+    },
+    methods: {
+        addTask : function () {
+            toDoList.list.push(document.getElementById('inputToDo').value);
+            document.getElementById('inputToDo').value = "";
+        }
     }
 });
 
+var testCheckbox = new Vue({
+    el: '#testCheckbox',
+    data: {
+        checked: true
+    }
+});
 
-
-function addTask() {
-    toDoList.list.push(document.getElementById('inputToDo').value);
-    document.getElementById('inputToDo').value = "";
-}
-// function app_change() {
-//     let text = document.getElementById('app-input').value;
-//     app.message = text;
-// }
-
+var example_3 = new Vue({
+    el: '#example-3',
+    data: {
+        checkedNames: []
+    }
+});
 
 // jQuery section
 $(function () {

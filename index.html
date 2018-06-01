@@ -1,5 +1,8 @@
 <!doctype html>
-<html lang="ru" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<html lang="ru"
+      xmlns:v-bind="http://www.w3.org/1999/xhtml"
+      xmlns:v-on="http://www.w3.org/1999/xhtml"
+      xmlns:v-model="http://www.w3.org/1999/xhtml">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -107,14 +110,15 @@
                                    min="0" max="500" v-model="range" v->
                             <br/>
                             <p id="range-result">
-                                {{range}}
+                                {{ range }}
                             </p>
                         </div>
 
                         <div id="app">
-                            <input type="text" v-model="message">
+                            Test:
+                            <input type="number" v-model="message">
                             <br />
-                            <h1> {{message}}</h1>
+                            <h1> {{ message }}</h1>
                         </div>
 
                         <div id="app-4">
@@ -130,13 +134,13 @@
                                 <div>
                                     <label>
                                         FirstName:
-                                        <input v-model="firstName" type="text" >
+                                        <input v-model.trim="firstName" type="text" >
                                     </label>
                                 </div>
                                 <div>
                                     <label>
                                         LastName:
-                                        <input v-model="lastName" type="text" >
+                                        <input v-model.trim="lastName" type="text" >
                                     </label>
                                 </div>
                                 <div>
@@ -161,14 +165,33 @@
 
                         <div id="toDoList">
                             <div>
-                                <label>Input task: <input id="inputToDo" type="text"></label>
-                                <button id="zaeb" type="button" onclick="addTask()">Add</button>
+                                <label>
+                                    Input task:
+                                    <input id="inputToDo" type="text"
+                                           v-on:keyup.enter="addTask">
+                                </label>
+                                <button id="zaeb" type="button" v-on:click="addTask">Add</button>
                             </div>
                             <div>
                                 <ul>
                                     <li v-for="item in list">{{ item }}</li>
                                 </ul>
                             </div>
+                        </div>
+
+                        <div id="testCheckbox">
+                            <label><input type="checkbox" v-model="checked">{{ checked }}</label>
+                        </div>
+
+                        <div id='example-3'>
+                            <label><input type="checkbox" value="Jack" v-model="checkedNames">Jack</label>
+                            <!--<label for="jack">Jack</label>-->
+                            <input type="checkbox" id="john" value="John" v-model="checkedNames">
+                            <label for="john">John</label>
+                            <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+                            <label for="mike">Mike</label>
+                            <br>
+                            <span>Checked names: {{ checkedNames }}</span>
                         </div>
 
                     </div>
