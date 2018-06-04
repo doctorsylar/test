@@ -1,3 +1,6 @@
+"use strict";
+// const Vue = require('vue.js');
+
 $('#carousel').carousel({
     interval: 2000
 });
@@ -62,14 +65,14 @@ var toDoList = new Vue({
     },
     methods: {
         addTask : function () {
-            toDoList.list.push(document.getElementById('inputToDo').value);
+            this.list.push(document.getElementById('inputToDo').value);
             document.getElementById('inputToDo').value = "";
         }
     }
 });
 
 var testCheckbox = new Vue({
-    el: '#testCheckbox',
+    el: '#test-checkbox',
     data: {
         checked: true
     }
@@ -80,6 +83,23 @@ var example_3 = new Vue({
     data: {
         checkedNames: []
     }
+});
+
+Vue.component('custom-checkbox', {
+    model: {
+        prop: 'checked',
+        event: 'change'
+    },
+    props: {
+        checked: Boolean
+    },
+    template: `
+        <input
+            type="checkbox"
+            v-bind:checked="checked"
+            v-on:change="$emit('change', $event.target.checked)"
+        >
+    `
 });
 
 // jQuery section
