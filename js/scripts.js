@@ -1,5 +1,4 @@
 "use strict";
-// const Vue = require('vue.js');
 
 $('#carousel').carousel({
     interval: 2000
@@ -85,21 +84,23 @@ var example_3 = new Vue({
     }
 });
 
-Vue.component('custom-checkbox', {
-    model: {
-        prop: 'checked',
-        event: 'change'
+
+var customComponent = new Vue({
+    el: 'custom-component'
+});
+
+
+Vue.component('button-counter', {
+    data: function () {
+        return {
+            count: 0
+        }
     },
-    props: {
-        checked: Boolean
-    },
-    template: `
-        <input
-            type="checkbox"
-            v-bind:checked="checked"
-            v-on:change="$emit('change', $event.target.checked)"
-        >
-    `
+    template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+});
+
+var compDemo = new Vue({
+    el: '#components-demo'
 });
 
 // jQuery section
