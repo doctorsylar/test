@@ -85,11 +85,6 @@ var example_3 = new Vue({
 });
 
 
-var customComponent = new Vue({
-    el: 'custom-component'
-});
-
-
 Vue.component('button-counter', {
     data: function () {
         return {
@@ -99,9 +94,15 @@ Vue.component('button-counter', {
     template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
 });
 
+Vue.component('blog-post', {
+    props: ['title'],
+    template: '<h3>{{ title }}</h3>'
+});
+
 var compDemo = new Vue({
     el: '#components-demo'
 });
+
 
 // jQuery section
 $(function () {
@@ -120,7 +121,9 @@ $(function () {
 //Pure JS section
 function selFunc() {
     var selected = document.getElementById("mySelect").selectedIndex;
-    alert("Индекс: " + selected);
+    alert("Индекс: " + selected +
+        ", фрукт: " + document.getElementById("mySelect")
+            .children[selected].innerHTML);
 }
 
 function check() {

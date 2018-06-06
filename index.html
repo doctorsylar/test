@@ -185,23 +185,15 @@
 
                         <div id='example-3'>
                             <label><input type="checkbox" value="Jack" v-model="checkedNames">Jack</label>
-                            <!--<label for="jack">Jack</label>-->
-                            <input type="checkbox" id="john" value="John" v-model="checkedNames">
-                            <label for="john">John</label>
-                            <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
-                            <label for="mike">Mike</label>
+                            <label><input type="checkbox" value="John" v-model="checkedNames">John</label>
+                            <label><input type="checkbox" value="Mike" v-model="checkedNames">Mike</label>
                             <br>
                             <span>Checked names: {{ checkedNames }}</span>
                         </div>
 
-                        <div id="custom-component">
-                            <custom-component-inner></custom-component-inner>
-                        </div>
-
                         <div id="components-demo">
-                            <div><button-counter class="btn btn-primary"></button-counter></div>
-                            <div><button-counter class="btn btn-primary"></button-counter></div>
-                            <div><button-counter class="btn btn-primary"></button-counter></div>
+                            <button-counter></button-counter>
+                            <blog-post title="Test blog-post title"></blog-post>
                         </div>
 
                     </div>
