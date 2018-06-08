@@ -1,2 +1,2 @@
-# test
-Project for testing bootstrap 4
+Project for testing bootstrap 4, vue.js, etc
+

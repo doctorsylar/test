@@ -194,6 +194,14 @@
                         <div id="components-demo">
                             <button-counter></button-counter>
                             <blog-post title="Test blog-post title"></blog-post>
+                            <blog-post
+                                    v-for="post in posts"
+                                    v-bind:key="post.id"
+                                    v-bind:post="post"></blog-post>
+                        </div>
+
+                        <div id="blog-posts-list">
+
                         </div>
 
                     </div>

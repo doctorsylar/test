@@ -95,12 +95,27 @@ Vue.component('button-counter', {
 });
 
 Vue.component('blog-post', {
-    props: ['title'],
-    template: '<h3>{{ title }}</h3>'
+    props: ['post'],
+    template:
+    `<div class="blog-post">
+        <h3>{{ post.title }}</h3>
+        <div v-html="post.content"></div>
+    </div>`
 });
 
-var compDemo = new Vue({
-    el: '#components-demo'
+// var compDemo = new Vue({
+//     el: '#components-demo'
+// });
+
+var blogPostsList = new Vue({
+    el: '#components-demo',
+    data: {
+        posts: [
+            { id: 1, title: 'Post title 1', content: "Post 1 content" },
+            { id: 2, title: 'Post title 2', content: "Post 2 content"  },
+            { id: 3, title: 'Post title 3', content: "Post 3 content"  }
+        ]
+    }
 });
 
 
