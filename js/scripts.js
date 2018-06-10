@@ -103,7 +103,7 @@ Vue.component('button-counter', {
 //     </div>`
 // });
 
-Vue.component('blog-post', {
+var blogPost = {
     props: ['post'],
     template: `
     <div class="blog-post">
@@ -117,7 +117,22 @@ Vue.component('blog-post', {
       <div v-html="post.content"></div>
     </div>
   `
-})
+};
+// Vue.component('blog-post', {
+//     props: ['post'],
+//     template: `
+//     <div class="blog-post">
+//       <h3>{{ post.title }}</h3>
+//       <button v-on:click="$emit('enlarge-text')">
+//         Enlarge text
+//       </button>
+//       <button v-on:click="$emit('reduce-text')">
+//         Reduce text
+//       </button>
+//       <div v-html="post.content"></div>
+//     </div>
+//   `
+// });
 
 var blogPostsEventsDiv = new Vue({
     el: '#blog-posts-events',
@@ -128,19 +143,22 @@ var blogPostsEventsDiv = new Vue({
             { id: 3, title: 'title 3', content: 'content 3'}
         ],
         postFontSize: 1
+    },
+    components: {
+        'blog-post' : blogPost
     }
 });
 
-var blogPostsList = new Vue({
-    el: '#components-demo',
-    data: {
-        posts: [
-            { id: 1, title: 'Post title 1', content: "Post 1 content" },
-            { id: 2, title: 'Post title 2', content: "Post 2 content"  },
-            { id: 3, title: 'Post title 3', content: "Post 3 content"  }
-        ]
-    }
-});
+// var blogPostsList = new Vue({
+//     el: '#components-demo',
+//     data: {
+//         posts: [
+//             { id: 1, title: 'Post title 1', content: "Post 1 content" },
+//             { id: 2, title: 'Post title 2', content: "Post 2 content"  },
+//             { id: 3, title: 'Post title 3', content: "Post 3 content"  }
+//         ]
+//     }
+// });
 
 
 // jQuery section
