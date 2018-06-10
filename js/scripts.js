@@ -94,18 +94,42 @@ Vue.component('button-counter', {
     template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
 });
 
+// Vue.component('blog-post', {
+//     props: ['post'],
+//     template:
+//     `<div class="blog-post">
+//         <h3>{{ post.title }}</h3>
+//         <div v-html="post.content"></div>
+//     </div>`
+// });
+
 Vue.component('blog-post', {
     props: ['post'],
-    template:
-    `<div class="blog-post">
-        <h3>{{ post.title }}</h3>
-        <div v-html="post.content"></div>
-    </div>`
-});
+    template: `
+    <div class="blog-post">
+      <h3>{{ post.title }}</h3>
+      <button v-on:click="$emit('enlarge-text')">
+        Enlarge text
+      </button>
+      <button v-on:click="$emit('reduce-text')">
+        Reduce text
+      </button>
+      <div v-html="post.content"></div>
+    </div>
+  `
+})
 
-// var compDemo = new Vue({
-//     el: '#components-demo'
-// });
+var blogPostsEventsDiv = new Vue({
+    el: '#blog-posts-events',
+    data: {
+        posts: [
+            { id: 1, title: 'title 1', content: 'content 1'},
+            { id: 2, title: 'title 2', content: 'content 2'},
+            { id: 3, title: 'title 3', content: 'content 3'}
+        ],
+        postFontSize: 1
+    }
+});
 
 var blogPostsList = new Vue({
     el: '#components-demo',
