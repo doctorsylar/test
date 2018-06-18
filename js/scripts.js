@@ -94,6 +94,7 @@ Vue.component('button-counter', {
     template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
 });
 
+// Global component
 // Vue.component('blog-post', {
 //     props: ['post'],
 //     template:
@@ -103,6 +104,8 @@ Vue.component('button-counter', {
 //     </div>`
 // });
 
+
+// Local component
 var blogPost = {
     props: ['post'],
     template: `

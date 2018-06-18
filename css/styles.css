@@ -35,6 +35,18 @@ img {
     color: blue;
 }
 
+.flexbox-container {
+    display: flex;
+}
+
+.flex-element {
+    height: 200px;
+    width: 200px;
+    background-color: gray;
+    margin-right: 10px;
+}
+
+
 /*CAN BE DELETED*/
 .menu-item {
     border: 2px solid green;
