@@ -168,8 +168,12 @@ var blogPostsEventsDiv = new Vue({
 $(function () {
    // hide
    $('#about').click(function () {
-       $('#cont').toggle()
+       $('#cont').toggle();
    });
+   $('.flexbox-container button').click(function () {
+       var el_id = this.id;
+       alert('id: ' + el_id);
+   })
 
    // $('#mySelect').change(function () {
    //     var selected = $('#mySelect').selectedIndex;
