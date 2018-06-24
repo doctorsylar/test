@@ -173,13 +173,9 @@ $(function () {
    $('.flexbox-container button').click(function () {
        var el_id = this.id;
        alert('id: ' + el_id);
-   })
+   });
 
-   // $('#mySelect').change(function () {
-   //     var selected = $('#mySelect').selectedIndex;
-   //     console.log(selected);
-   //     alert("Индекс: " + selected);
-   // });
+
 });
 
 //Pure JS section

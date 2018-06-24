@@ -17,7 +17,7 @@
     <title>Test project</title>
 </head>
 <body>
-<h1>BOOTSTRAP 4</h1>
+<h1>Bootstrap 4</h1>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
     <a class="navbar-brand" href="#">Tests</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -94,57 +94,75 @@
                     <span class="carousel-control-prev-icon"></span>
                 </a>
             </div>
-            <div class="flexbox-container">
-                <div class="flex-element">
-                    1
-                </div>
-                <div class="flex-element">
-                    2
-
-                </div>
-                <div class="flex-element">
-                    3
-                </div>
-                <button id="hider"></button>
-            </div>
         </div>
         <div class="col-lg-6 p-0">
             <div class="container-fluid p-0">
                 <div class="row m-0">
 
                     <div class="col-sm-6 p-0 heh" >
-                        <!--/*CAN BE DELETED*/-->
-                        <div class="nav" id="nav">
-                            <div class="menu-item">
-                                Menu 1
-                                <div class="submenu">
-                                    Submenu 1
-                                </div>
-                            </div>
-                            <div class="menu-item">
-                                Menu 2
-                                <div class="submenu">
-                                    Submenu 2
-                                </div>
-                            </div>
-                            <div class="menu-item">
-                                Menu 3
-                                <div class="submenu">
-                                    Submenu 3
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            just another cool div
-                        </div>
-                        <!--/*CAN BE DELETED*/-->
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<!-- Pure JavaScript-->
+<h1>Pure JavaScript</h1>
+<!--/*CAN BE DELETED*/-->
+<div>
+    <div class="nav" id="nav">
+        <div class="menu-item">
+            Menu 1
+            <div class="submenu">
+                Submenu 1
+            </div>
+        </div>
+        <div class="menu-item">
+            Menu 2
+            <div class="submenu">
+                Submenu 2
+            </div>
+        </div>
+        <div class="menu-item">
+            Menu 3
+            <div class="submenu">
+                Submenu 3
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    just another cool div
+</div>
+<!--/*CAN BE DELETED*/-->
+
+
+<!-- jQuery -->
+
+
 <h1>jQuery</h1>
+
+<div class="flexbox-container">
+    <div class="flex-element">
+        1
+    </div>
+    <div class="flex-element">
+        2
+
+    </div>
+    <div class="flex-element">
+        3
+    </div>
+    <button id="hider"></button>
+</div>
+
+
+<!-- Vue.js -->
+
+
 <h1>Vue.js</h1>
 <div>
     <div>
@@ -242,15 +260,6 @@
         <span>Checked names: {{ checkedNames }}</span>
     </div>
 
-    <!--<div id="components-demo">-->
-    <!--<button-counter></button-counter>-->
-    <!--<blog-post title="Test blog-post title"></blog-post>-->
-    <!--<blog-post-->
-    <!--v-for="post in posts"-->
-    <!--v-bind:key="post.id"-->
-    <!--v-bind:post="post"></blog-post>-->
-    <!--</div>-->
-
 
     <div id="blog-posts-events">
         <div :style="{ fontSize: postFontSize + 'em' }">
@@ -268,7 +277,7 @@
 <h1>Angular</h1>
 
 
-<!--Contact modal-->
+<!-- Contact modal -->
 <div class="modal fade" id="contactModal" tabindex="-1" role="dialog"
     aria-labelledby="contactModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
