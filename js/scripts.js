@@ -212,7 +212,7 @@ document.onmouseover = function (event) {
     if (target.className != 'menu-item' && target.className != 'submenu') {
         closeMenu();
     }
-}
+};
 
 function closeMenu() {
     var menu = document.getElementById('nav');
