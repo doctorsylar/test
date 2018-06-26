@@ -186,11 +186,6 @@ function selFunc() {
             .children[selected].innerHTML);
 }
 
-function check() {
-    let range = document.getElementById('inp-range');
-    let res = document.getElementById('range-result');
-    res.innerHTML = range.value;
-}
 
 /*CAN BE DELETED*/
 
