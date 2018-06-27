@@ -60,12 +60,19 @@ var app4 = new Vue({
 var toDoList = new Vue({
     el: '#toDoList',
     data: {
-        list : ["one", "two"]
+        list : [
+            { text: 'one' },
+            { text: 'two'}
+        ],
+        inputVue: ''
     },
     methods: {
         addTask : function () {
-            this.list.push(document.getElementById('inputToDo').value);
-            document.getElementById('inputToDo').value = "";
+            this.list.push({ text : this.inputVue });
+            this.inputVue = "";
+        },
+        deleteTask : function (index) {
+            this.list.splice(index, 1);
         }
     }
 });
@@ -94,15 +101,6 @@ Vue.component('button-counter', {
     template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
 });
 
-// Global component
-// Vue.component('blog-post', {
-//     props: ['post'],
-//     template:
-//     `<div class="blog-post">
-//         <h3>{{ post.title }}</h3>
-//         <div v-html="post.content"></div>
-//     </div>`
-// });
 
 
 // Local component
@@ -121,21 +119,6 @@ var blogPost = {
     </div>
   `
 };
-// Vue.component('blog-post', {
-//     props: ['post'],
-//     template: `
-//     <div class="blog-post">
-//       <h3>{{ post.title }}</h3>
-//       <button v-on:click="$emit('enlarge-text')">
-//         Enlarge text
-//       </button>
-//       <button v-on:click="$emit('reduce-text')">
-//         Reduce text
-//       </button>
-//       <div v-html="post.content"></div>
-//     </div>
-//   `
-// });
 
 var blogPostsEventsDiv = new Vue({
     el: '#blog-posts-events',
@@ -152,16 +135,6 @@ var blogPostsEventsDiv = new Vue({
     }
 });
 
-// var blogPostsList = new Vue({
-//     el: '#components-demo',
-//     data: {
-//         posts: [
-//             { id: 1, title: 'Post title 1', content: "Post 1 content" },
-//             { id: 2, title: 'Post title 2', content: "Post 2 content"  },
-//             { id: 3, title: 'Post title 3', content: "Post 3 content"  }
-//         ]
-//     }
-// });
 
 
 // jQuery section

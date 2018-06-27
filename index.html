@@ -237,14 +237,17 @@
         <div>
             <label>
                 Input task:
-                <input id="inputToDo" type="text"
+                <input id="inputToDo" type="text" v-model="inputVue"
                        v-on:keyup.enter="addTask">
             </label>
-            <button id="zaeb" type="button" v-on:click="addTask">Add</button>
+            <button type="button" v-on:click="addTask">Add</button>
         </div>
         <div>
             <ul>
-                <li v-for="item in list">{{ item }}</li>
+                <li v-for="item, index in list">
+                    {{ item.text }}
+                    <button type="button" v-on:click="deleteTask(index)" > X </button>
+                </li>
             </ul>
         </div>
     </div>
