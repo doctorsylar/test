@@ -77,6 +77,7 @@ var toDoList = new Vue({
     }
 });
 
+
 var testCheckbox = new Vue({
     el: '#test-checkbox',
     data: {
