@@ -135,6 +135,23 @@ var blogPostsEventsDiv = new Vue({
     }
 });
 
+new Vue({
+    el: '#passwordHider',
+    data: {
+        type: 'password'
+    },
+    methods: {
+        changeType: function () {
+            if (this.type === 'password') {
+                this.type = 'text';
+            }
+            else {
+                this.type = 'password';
+            }
+        }
+    }
+});
+
 
 
 // jQuery section
