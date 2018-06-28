@@ -178,7 +178,7 @@ function selFunc() {
 
 
 // Carousel JS code
-var slideIndex = 1;
+var slideIndex = 0;
 showSlide(slideIndex);
 
 function changeSlide(value) {
@@ -190,9 +190,9 @@ function showSlide(number) {
     var slides = document.getElementsByClassName('slidy');
 
     if (number >= slides.length) {
-        slideIndex = 1;
+        slideIndex = 0;
     }
-    else if (number < 1) {
+    else if (number < 0) {
         slideIndex = slides.length - 1;
     }
     for (i = 0; i < slides.length; i++ ) {
