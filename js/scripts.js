@@ -177,6 +177,30 @@ function selFunc() {
 }
 
 
+// Carousel JS code
+var slideIndex = 1;
+showSlide(slideIndex);
+
+function changeSlide(value) {
+    showSlide(slideIndex += value);
+}
+
+function showSlide(number) {
+    var i;
+    var slides = document.getElementsByClassName('slidy');
+
+    if (number >= slides.length) {
+        slideIndex = 1;
+    }
+    else if (number < 1) {
+        slideIndex = slides.length - 1;
+    }
+    for (i = 0; i < slides.length; i++ ) {
+        slides[i].style.display = 'none';
+    }
+    slides[slideIndex].style.display = 'block';
+}
+
 /*CAN BE DELETED*/
 
 document.getElementById('nav').onmouseover = function (event) {
