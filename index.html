@@ -141,7 +141,7 @@
 
 <div>
     <h2>Pure JS carousel</h2>
-    <div class="carousel-container">
+    <div class="carousel-container" id="carousel-js">
         <div class="slidy fade-js">
             <img src="img/1.jpg" alt="1" width="100%">
             <div class="description">1</div>
@@ -159,6 +159,11 @@
     </div>
 </div>
 
+<div class="css-only">
+    <div class="blank"></div>
+    <img src="./img/Rectangle9copy.png" alt="cs">
+
+</div>
 
 <!-- jQuery -->
 
@@ -301,6 +306,15 @@
         <input v-bind:type="type"> <br>
         <button type="button" v-on:click="changeType">Сменить тип поля</button>
     </div>
+    <div id="classHider">
+        <button class="butt one" v-on:click="changeElement">One</button>
+        <button class="butt two" v-on:click="changeElement">Two</button>
+        <button class="butt three" v-on:click="changeElement">Three</button>
+        <div class="elem one"   v-show="showElement === 'one'">One</div>
+        <div class="elem two"   v-show="showElement === 'two'">Two</div>
+        <div class="elem three" v-show="showElement === 'three'">Three</div>
+    </div>
+
 
 </div>
 <h1>Angular</h1>

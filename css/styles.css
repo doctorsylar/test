@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+
 img {
     width: 100%;
 }
@@ -107,6 +112,40 @@ h1 {
 @keyframes fading {
     0% { opacity: 0.4 }
     100% { opacity: 1 }
+}
+
+.elem {
+    height: 100px;
+}
+.one {
+    background-color: red;
+}
+.two {
+    background-color: green;
+}
+.three {
+    background-color: blue;
+}
+
+.css-only {
+    max-width: 1600px;
+    margin: auto;
+    background: #000 url("../img/Layer 96.png") no-repeat;
+    background-size: cover;
+    height: 700px;
+    padding: 30px 206px 30px 227px;
+
+}
+.css-only .blank {
+    width: 67px;
+    height: 67px;
+    background: white;
+    position: absolute;
+}
+.css-only img {
+    width: auto;
+    background-color: white;
+    transform: translate(-12px, -8px);
 }
 
 

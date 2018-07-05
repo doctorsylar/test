@@ -152,6 +152,20 @@ new Vue({
     }
 });
 
+new Vue({
+    el: '#classHider',
+    data: {
+        showElement: 'one'
+    },
+    methods: {
+        changeElement(el) {
+            let elem = el.target;
+            console.log(el);
+            this.showElement = elem.classList[elem.classList.length - 1];
+        }
+    }
+
+});
 
 
 // jQuery section
@@ -175,7 +189,6 @@ function selFunc() {
         ", фрукт: " + document.getElementById("mySelect")
             .children[selected].innerHTML);
 }
-
 
 // Carousel JS code
 var slideIndex = 0;
