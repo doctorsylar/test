@@ -179,6 +179,9 @@ $(function () {
        alert('id: ' + el_id);
    });
 
+   // $(window).scroll(function () {
+   //      let elems = $('.scroll-div');
+   // });
 
 });
 
@@ -212,6 +215,32 @@ function showSlide(number) {
         slides[i].style.display = 'none';
     }
     slides[slideIndex].style.display = 'block';
+}
+
+// let elems = document.getElementsByClassName('scroll-div');
+// window.onscroll = function () {
+//     let scrollPos = window.pageYOffset;
+//     console.log("SCROLL: " + scrollPos);
+//     for (let elem of elems) {
+//         console.log("TOP: " + elem.getBoundingClientRect().top);
+//         console.log("BOTTOM: " + elem.getBoundingClientRect().bottom);
+//         if (elem.getBoundingClientRect().top < 48 &&
+//             elem.getBoundingClientRect().bottom > 48 + elem.scrollHeight) {
+//             for (let element of elems) {
+//                 element.classList.remove('active');
+//             }
+//             elem.classList.add('active');
+//         }
+//     }
+// };
+function deactivate() {
+    let elem = document.getElementById('deactivative');
+    elem.classList.remove('act');
+    alert(elem.height);
+}
+function checkHeight() {
+    let elem = document.getElementById('deactivative');
+    alert(elem.scrollHeight);
 }
 
 /*CAN BE DELETED*/

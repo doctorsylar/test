@@ -149,6 +149,28 @@ h1 {
 }
 
 
+.scroll-test-class {
+    display: flex;
+    flex-direction: column;
+}
+.scroll-test-class .scroll-div {
+    width: 100%;
+    height: 150px;
+    background-color: blue;
+    margin-bottom: 5px;
+}
+.scroll-test-class .scroll-div[class~=active] {
+    background: red;
+}
+.act {
+    background: red;
+}
+#deactivative {
+    height: 50px;
+}
+
+
+
 /*CAN BE DELETED*/
 .menu-item {
     border: 2px solid green;
