@@ -168,6 +168,45 @@ h1 {
 #deactivative {
     height: 50px;
 }
+/* EDuCATION */
+#education {
+    padding-top: 20px;
+}
+#education .edu-container {
+    justify-content: space-between;
+}
+#education .edu-container > div {
+    width: 45%;
+    flex-direction: column;
+
+}
+#education .pics-container img {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+#education .pics-container img.photo {
+    width: 100%;
+}
+#education .edu-container .text-container div .edu-information {
+    text-align: left;
+}
+#education .edu-container .text-container span {
+    display: block;
+    font-size: 18px;
+    border-radius: 20px;
+}
+#education .edu-container .text-container span.button-bachelor {
+    background-color: tomato;
+}
+#education .edu-container .text-container span.button-master {
+    background-color: crimson;
+}
+#education .edu-container .text-containe .edu-information {
+    height: 0;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #999999;
+}
 
 
 
