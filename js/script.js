@@ -179,6 +179,13 @@ $(function () {
         alert('id: ' + el_id);
     });
 
+    $('#activate-modal').click(function (event) {
+        $('#mifotovid-modal').show();
+    });
+    $('#mifotovid-modal').click(function () {
+        $('#mifotovid-modal').hide();
+    });
+
     // $(window).scroll(function () {
     //      let elems = $('.scroll-div');
     // });
